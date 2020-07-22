@@ -11,5 +11,6 @@ var mySwiper = new Swiper('.swiper-container', {
   keyboard: {
     enable: true,
     pageUpDown: false,
-  }
+  },
+
 })
