@@ -795,6 +795,7 @@ template {
   position: relative;
   padding: 98px 0 87px 0;
   background-image: url(../img/newsletter-bg.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1008,11 +1009,11 @@ template {
   .container {
     max-width: 960px;
   }
-  .hotel-slider {
+  .hotel-slide {
     width: 590px;
     height: 455px;
   }
-  .hotel-slider__image {
+  .hotel-slide__image {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
