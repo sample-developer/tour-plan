@@ -1331,6 +1331,9 @@ template {
   .card {
     width: 100%;
   }
+  .activities {
+    padding-bottom: 60px;
+  }
   .activities__title {
     font-size: 18px;
     margin-top: 40px;
