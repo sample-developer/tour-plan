@@ -155,6 +155,8 @@
     height: 255px
   .advisor
     &-card
+      &-big
+        display: none
       &-hide
         display: initial
       &-image
@@ -166,9 +168,7 @@
         grid-template-columns: minmax(100%, 350px)
         grid-template-rows: repeat(5, 500px)
         grid-gap: 30px
-    &__card
-      &--big
-        display: none
+      
   
 @media ( max-width: 576px )
   .logo
