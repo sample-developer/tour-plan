@@ -23,6 +23,9 @@
         grid-template-columns: repeat(2, 350px)
         grid-template-rows: repeat(3, 500px)
         grid-gap: 30px
+  .footer
+    &__input
+      flex-basis: 100%
 @media ( max-width:  992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -77,6 +80,35 @@
         grid-template-columns: repeat(2, 350px)
         grid-template-rows: repeat(3, 500px)
         grid-gap: 30px
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__input
+      flex-basis: 49% 
+    &__logo
+      grid-row: 1/2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2/3
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 5
+      &-form
+
+        grid-column: span 5
+        grid-row: 5
 @media  ( max-width: 768px )
   .container
     max-width: 576px
@@ -168,8 +200,22 @@
         grid-template-columns: minmax(100%, 350px)
         grid-template-rows: repeat(5, 500px)
         grid-gap: 30px
-      
-  
+  .footer
+    &__input    
+      flex-basis: 100%
+    &__fields
+      display: flex
+      justify-content: flex-start
+      grid-column: 1
+      grid-row: 6
+      min-width: 283px
+    &__payment-methods
+      display: flex
+      justify-content: flex-end
+      grid-row: 6
+      grid-column: 6
+      min-width: 136px
+      min-height: 22px
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -215,4 +261,39 @@
         grid-template-columns: minmax(300px, 350px)
         grid-template-rows: repeat(5, 500px)
         grid-gap: 30px
-
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+    &__logo
+      width: 104px
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-column: 1
+        grid-row: 2
+    &__additional
+      grid-column: 1
+      grid-row: 3
+    &__categories
+      grid-column: 1
+      grid-row: 4
+    &__legal
+      grid-column: 1
+      grid-row: 5
+    &__contact
+      &-details
+        grid-column: 1
+        grid-row: 6
+      &-form
+        grid-column: 1
+        grid-row: 7
+    &__payment-methods
+      display: flex
+      justify-content: start
+      grid-column: 1
+      grid-row: 9
+    &__fields
+      grid-column: 1
+      grid-row: 8
