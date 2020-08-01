@@ -34,5 +34,5 @@ var reviewSwiper = new Swiper('.reviews-slider', {
 
 var menuButton = document.querySelector('.menu-button');
 menuButton.addEventListener('click', function () {
-  document.querySelector('.navbar-bottom').classList.toggel('navbar-bottom--visible');
+  document.querySelector('.navbar-bottom').classList.toggle("navbar-bottom--visible");
 });
