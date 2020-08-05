@@ -27,25 +27,39 @@
     visibility: hidden
     opacity: 0
     &--visible
+      overflow-y: scroll
       visibility: visible
       opacity: 1
       transition: opacity 0.2s
   &__close
     position: absolute
     top: 18px
-    left: 17px
+    right: 17px
   &__input
     width: 100%
     margin-bottom: 15px
+    outline: none
+    color: $footer-text-color
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__message
     width: 100%
     min-height: 123px
     margin-bottom: 15px
+    outline: none
+    color: $footer-text-color
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__info
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
+    margin-left: 40px
     color: #E0E0E0
   &__title
     text-align: center
@@ -56,3 +70,7 @@
     line-height: 23px
     margin: 0
     margin-bottom: 15px
+.body
+  &__open
+    &-modal
+      overflow: hidden

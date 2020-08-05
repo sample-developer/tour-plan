@@ -2,6 +2,8 @@
   .container
     max-width: 960px
   .hotel
+    &-slider
+      margin-right: 30px
     &-slide
       width: 590px
       height: 455px
@@ -86,7 +88,7 @@
       grid-row-gap: 40px
       grid-column-gap: 38px
     &__input
-      flex-basis: 49% 
+      flex-basis: 100%
     &__logo
       grid-row: 1/2
       grid-column: span 2
@@ -102,6 +104,7 @@
       grid-column: span 2
     &__legal
       grid-column: 6
+      padding-left: 0
     &__contact
       &-details
         grid-row: 3
@@ -111,9 +114,25 @@
         grid-column: span 5
         grid-row: 5
     &__fields
-      grid-column: 1 / 4
+      grid-column: 1 / 5
+      justify-content: flex-start
     &__payment-methods
       grid-column: 6
+  .modal
+    &__dialog
+      width: 80%
+      padding: 25px 44px
+    &__button
+      order: 10
+    &__req-but
+      width: 100%
+      display: flex
+      flex-direction: column
+    &__button
+      order: 10
+    &__info
+      margin-bottom: 15px
+      margin-left: 0
 @media  ( max-width: 768px )
   .container
     max-width: 576px
@@ -260,7 +279,13 @@
       grid-row: 5
     &__payment-methods
       grid-row: 5
- 
+  .modal
+    &__dialog 
+      max-width: 576px
+      padding: 20px 50px
+    &__button
+      max-width: 160px
+      order: 101
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -287,6 +312,9 @@
       font-size: 18px
   .card
     width: 100%
+  .search
+    &__input
+      max-width: 245px
   .activities
     padding-bottom: 60px
     &__title
@@ -355,3 +383,17 @@
       max-height: 123px
     &__input
       width: 90%
+    &__legal
+      padding: 0
+    &__social-network
+      width: 100%
+  .modal
+    &__dialog
+      max-width: 576px
+      width: 92%
+      padding: 20px 15px
+@media ( max-height: 576px )
+  .modal
+    &__dialog
+      overflow-y: auto
+      height: 90vh

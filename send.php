@@ -30,12 +30,12 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'ya-kababchik-sasha'; // Логин на почте
+    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+    $mail->Username   = 'sample.0.developer@gmail.com'; // Логин на почте
     $mail->Password   = 'WinterSummer12'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ya-kababchik-sasha', 'Aleksandr'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('sample.0.developer@gmail.com', 'Aleksandr'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('bergomot85@gmail.com'); 
@@ -56,4 +56,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location:index.html')
+header('Location:thankyou.html');

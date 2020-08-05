@@ -543,8 +543,10 @@ template {
 }
 
 .hotel-slider {
-  width: 728px;
-  height: 100%;
+  max-width: 728px;
+  max-height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .hotel-slider__image {
@@ -632,7 +634,7 @@ template {
   margin-bottom: 0;
 }
 
-.hotel-info__describtion {
+.hotel-info__description {
   margin: 0;
   margin-top: 4px;
 }
@@ -654,6 +656,7 @@ template {
 }
 
 .hotel__right {
+  max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,7 +669,7 @@ template {
           justify-content: space-between;
 }
 
-.desciption {
+.description {
   font-size: 12px;
   line-height: 15px;
 }
@@ -1480,11 +1483,13 @@ template {
 
 .footer__input {
   margin-bottom: 15px;
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
 }
 
 .footer__message {
+  max-width: 545px;
+  height: 123px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
@@ -1538,6 +1543,15 @@ template {
   min-height: 22px;
 }
 
+.footer__telephone-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__legal {
+  padding-left: 54px;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -1574,6 +1588,7 @@ template {
 }
 
 .modal__dialog--visible {
+  overflow-y: scroll;
   visibility: visible;
   opacity: 1;
   -webkit-transition: opacity 0.2s;
@@ -1583,18 +1598,30 @@ template {
 .modal__close {
   position: absolute;
   top: 18px;
-  left: 17px;
+  right: 17px;
 }
 
 .modal__input {
   width: 100%;
   margin-bottom: 15px;
+  outline: none;
+  color: #BDBDBD;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
   margin-bottom: 15px;
+  outline: none;
+  color: #BDBDBD;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .modal__info {
@@ -1602,6 +1629,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  margin-left: 40px;
   color: #E0E0E0;
 }
 
@@ -1616,9 +1644,16 @@ template {
   margin-bottom: 15px;
 }
 
+.body__open-modal {
+  overflow: hidden;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .hotel-slider {
+    margin-right: 30px;
   }
   .hotel-slide {
     width: 590px;
@@ -1739,8 +1774,8 @@ template {
     grid-column-gap: 38px;
   }
   .footer__input {
-    -ms-flex-preferred-size: 49%;
-        flex-basis: 49%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1769,6 +1804,7 @@ template {
   .footer__legal {
     -ms-grid-column: 6;
     grid-column: 6;
+    padding-left: 0;
   }
   .footer__contact-details {
     -ms-grid-row: 3;
@@ -1782,12 +1818,43 @@ template {
   }
   .footer__fields {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .footer__payment-methods {
     -ms-grid-column: 6;
     grid-column: 6;
+  }
+  .modal__dialog {
+    width: 80%;
+    padding: 25px 44px;
+  }
+  .modal__button {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .modal__req-but {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal__button {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+  .modal__info {
+    margin-bottom: 15px;
+    margin-left: 0;
   }
 }
 
@@ -2008,6 +2075,16 @@ template {
     -ms-grid-row: 5;
     grid-row: 5;
   }
+  .modal__dialog {
+    max-width: 576px;
+    padding: 20px 50px;
+  }
+  .modal__button {
+    max-width: 160px;
+    -webkit-box-ordinal-group: 102;
+        -ms-flex-order: 101;
+            order: 101;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2045,6 +2122,9 @@ template {
   }
   .card {
     width: 100%;
+  }
+  .search__input {
+    max-width: 245px;
   }
   .activities {
     padding-bottom: 60px;
@@ -2157,6 +2237,24 @@ template {
   }
   .footer__input {
     width: 90%;
+  }
+  .footer__legal {
+    padding: 0;
+  }
+  .footer__social-network {
+    width: 100%;
+  }
+  .modal__dialog {
+    max-width: 576px;
+    width: 92%;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-height: 576px) {
+  .modal__dialog {
+    overflow-y: auto;
+    height: 90vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
