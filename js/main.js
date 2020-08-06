@@ -107,4 +107,6 @@ $(document).ready(function () {
   });
 
   $('.input__tel').mask('+7 (000) 000-00-00');
+
+  AOS.init();
 });
