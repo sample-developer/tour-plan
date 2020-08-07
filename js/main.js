@@ -109,5 +109,26 @@ $(document).ready(function () {
 
   $('.input__tel').mask('+7 (000) 000-00-00');
 
+
+  //активация карты по наведению мыши 
+
+
+  $(".map__image").mouseover(function () {
+    $(".map__image").addClass("map__image--dn");
+    let map;
+
+    function initMap() {
+      var opt = {
+        center: {
+          lat: 41.011845,
+          lng: 39.615020
+        },
+        zoom: 8
+      }
+      map = new google.maps.Map(document.getElementById("map"), opt);
+    }
+    initMap();
+  });
+
   AOS.init();
 });
