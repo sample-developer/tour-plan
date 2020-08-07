@@ -7,6 +7,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
@@ -16,20 +17,20 @@
 
 <body>
   <header class="navbar navbar--mobile_fixed">
+
     <div class="container">
       <div class="navbar-top">
-        <a href="#" class="logo" data-aos="fade-right" data-aos-delay="200">
+        <a href="#" class="logo">
           <img src="img/horizontal-logo.svg" alt="logo: best tour plan" class="logo__image" />
         </a>
-        <form action="#" class="search navbar__search navbar__search--mobile_hidden" data-aos="fade-right"
-          data-aos-delay="250">
+        <form action="#" class="search navbar__search navbar__search--mobile_hidden">
           <input type="text" class="search__input" placeholder="Search Location" />
           <button class="search__button">
             <img src="img/search.svg" alt="icon: search" />
           </button>
         </form>
 
-        <a href="#" class="user navbar__user navbar__user--mobile_hidden" data-aos="fade-right" data-aos-delay="300">
+        <a href="#" class="user navbar__user navbar__user--mobile_hidden">
           <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="user__avatar" />
           <span class="user__name">Nathan</span>
         </a>
@@ -794,7 +795,8 @@ quest" class="card__image" />
               <input type="name" class="input footer__input" placeholder="Your Full Name*" name="name" required />
             </div>
             <div class="footer__input-group">
-              <input type="tel" class="input footer__input" placeholder="Phone Number*" name="phone" required />
+              <input type="tel" class="input footer__input input__tel" placeholder="Phone Number*" name="phone"
+                required />
             </div>
             <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
